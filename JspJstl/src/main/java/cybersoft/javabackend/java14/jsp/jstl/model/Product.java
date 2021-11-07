@@ -64,15 +64,7 @@ public class Product {
 			this.stock = stock;
 		}
 
-		public void printProducts() {
-			
-			System.out.println("Id: " + this.id);
-			System.out.println("Name: " + this.name);
-			System.out.println("Description" + this.description);
-			System.out.println("Price: " + this.price);
-			System.out.println("stock: " + this.stock);
-			
-		}
+		
 		
 }
 

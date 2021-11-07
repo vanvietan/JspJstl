@@ -23,7 +23,7 @@ private ProductRepository repository;
 	public boolean addProduct(Product product) {
 		/* validate product */
 		
-		
+		 
 		return repository.addProduct(product) == 1 ? true : false;
 	}
 	

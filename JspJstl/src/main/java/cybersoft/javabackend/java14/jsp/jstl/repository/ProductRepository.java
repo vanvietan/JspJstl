@@ -72,6 +72,7 @@ public class ProductRepository {
 			statement.setString(1, productId);
 			
 			return statement.executeUpdate();
+			
 		} catch (SQLException e) {
 			System.out.println("Không thể kết nối đến cơ sở dữ liệu");
 			e.printStackTrace();

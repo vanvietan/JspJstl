@@ -2,6 +2,7 @@ package cybersoft.javabackend.java14.jsp.jstl.servlet;
 
 import java.io.IOException;
 
+import cybersoft.javabackend.java14.jsp.jstl.model.Product;
 import cybersoft.javabackend.java14.jsp.jstl.service.ProductService;
 import cybersoft.javabackend.java14.jsp.jstl.util.UrlConst;
 import jakarta.servlet.ServletException;
@@ -40,7 +41,16 @@ public class ProductServlet extends HttpServlet {
 			service.removeProduct(deleteId);
 			resp.sendRedirect(req.getContextPath() + "/products");
 			break;
-
+		case "/products/add":
+			Product product = new Product();
+			product.setId(req.getParameter("id"));
+			product.setName(req.getParameter("name"));
+			product.setDescription(req.getParameter("description"));
+			product.setPrice(Float.parseFloat(req.getParameter("price")));
+			product.setStock(Integer.parseInt(req.getParameter("stock")));
+			service.addProduct(product);
+			resp.sendRedirect(req.getContextPath() + "/products");
+			break;
 		default:
 			break;
 		}
