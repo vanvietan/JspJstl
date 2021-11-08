@@ -13,6 +13,8 @@
 	<body>
 		<div class="container-fluid">
       <h1>Product page</h1>
+      <h2><%=session.getAttribute("fullname")%></h2>
+      <p id="btnFun" class="btn btn-success">Click me for fun</p>
          <form action ="<%= request.getContextPath()+ UrlConst.PRODUCT_ADD %>" method ="get">
       	<label>ID: </label>
       	<input type="text" name="id">
@@ -59,5 +61,10 @@
           </tbody>
         </table>
     </div>
+    <script type="text/javascript">
+    $("#btnFun").click(function(){
+    	  alert("Hello!!!");
+    	});
+    </script>
 	</body>
 </html>
